@@ -28,13 +28,23 @@ kind create cluster --config c1.yaml --kubeconfig /home/ubuntu/work/kind/.kind/c
 
 ```
 
-kubectl get pods -A  --context kind-kind
+kubectl cluster-info kind-{name_of_cluster} --kubeconfig path/to/kubeconfig
+
+```
+
+For example:
+
+
+```
+
+kubectl cluster-info --context kind-kind --kubeconfig /home/ubuntu/work/kind/.kind/config
+
 
 ```
 
 ```
 
-kubectl get pods -A  --context kind-kind-2
+kubectl cluster-info --context kind-kind-2 --kubeconfig /home/ubuntu/work/kind/.kind2/config
 
 ```
 
